@@ -29,7 +29,7 @@ define('DB_USER', getenv("DATABASE_USER"));
 define('DB_PASSWORD', getenv("DATABASE_PASSWORD"));
 
 /** MySQL hostname */
-define('DB_HOST', getenv("MARIADB_SERVICE_HOST"));
+define('DB_HOST', getenv(strtoupper(getenv("DATABASE_SERVICE_NAME"))."_SERVICE_HOST"));
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
